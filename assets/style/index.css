@@ -1,0 +1,100 @@
+@import './reset.css';
+ 
+:root {
+    --app-purple:#833cff;
+    --app-blue:#3c57ff;
+}
+ 
+body {
+    background-color:var(--app-purple);
+}
+ 
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline:auto;
+}
+
+.guess-game {
+    display: grid;
+    place-items: center;
+}
+
+main {
+    padding: 100px 0px 30px;
+}
+
+h2, p {
+    color: #f4f6f8;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    visibility: hidden;
+}
+
+p {
+    font-size: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Styling input */
+input[type="text"] {
+    margin-top: 30px;
+    width: 250px;
+    height: 250px;
+    padding: 0 15px;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--app-purple);
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+}
+
+::placeholder {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* Styling Output */
+.output {
+    margin-top: 40px;
+    width: 350px;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 4px;
+    background-color: rgb(0 0 0 / 0.6);
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2) inset, -1px -1px 1px 0 rgba(255, 255, 255, 0.1) inset;
+    text-align: left;
+}
+
+.output p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #f2f4f6;
+    line-height: 52px;
+    cursor: default;
+}
+
+/* Styling Button */
+button {
+    position: fixed;
+    Top: 40px;
+    bottom: 10px;
+    Right: 10%;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #f4f6f8;
+    color: var(--app-purple);
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0px 5px 10px rgb(0 0 0 / 0.4);
+}
