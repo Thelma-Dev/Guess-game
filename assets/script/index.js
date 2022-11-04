@@ -49,6 +49,8 @@ function isNumber(str) {
     
 }
 
+
+
 const randomNumber = Math.floor(Math.random() * 50);
 
 console.log(randomNumber);
@@ -59,6 +61,7 @@ function restart() {
     guesses.classList = 'h2';
     restartBtn.classList = '#restart';
     readWindow();
+    generateRandomNumber();
 }
 
 
