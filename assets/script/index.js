@@ -23,6 +23,22 @@ const inputField = select('#input');
 const guesses = select('h2')
 
 
+// Start game
+function readWindow() {
+    guesses.classList = 'is-visible';
+    guesses.innerText = 'I am a number less than 50, what am i?';
+    number.value = '';
+} 
+
+window.addEventListener('load', () => {
+    readWindow();
+});
+
+onEvent('focus', inputField, function(event) {;
+    guesses.classList = 'h2';
+});
+
+
 function isNumber(str) {
     let input = str.trim();
 
@@ -33,13 +49,16 @@ function isNumber(str) {
     
 }
 
-const randomNumber = Math.floor((Math.random() * 50) + 1);
+const randomNumber = Math.floor(Math.random() * 50);
+
+console.log(randomNumber);
 
 
 function restart() {
-    number.value = '';
     output.innerText ='';
     guesses.classList = 'h2';
+    restartBtn.classList = '#restart';
+    readWindow();
 }
 
 
@@ -76,11 +95,11 @@ onEvent('click', btn, function() {
             output.innerText =`Woohoo! You guessed right`;
             guesses.classList = 'is-visible';
             guesses.innerText = `Guesses: ${count}`;
+            restartBtn.classList = 'is-visible';
             number.value = '';
             count = 0;
         }
     }
     count++;
 });
-
 
