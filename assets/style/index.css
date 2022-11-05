@@ -1,12 +1,14 @@
 @import './reset.css';
  
 :root {
-    --app-purple:#833cff;
+    --app-purple:#670067;
     --app-blue:#3c57ff;
+    --app-yellow: #f5c133;
+    --app-yellow-hover: #f7bc1c;
 }
  
 body {
-    background-color: #670067;
+    background-color: var(--app-purple);
 }
  
 .container {
@@ -47,8 +49,8 @@ p {
 /* Styling input */
 input[type="text"] {
     margin-top: 30px;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 150px;
     padding: 0 15px;
     border: none;
     background-color: rgb(250, 248, 248);
@@ -56,10 +58,15 @@ input[type="text"] {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 400;
-    color: var(--app-purple);
+    color: #670067;
     font-size: 70px;
     font-weight: 600;
     text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 ::placeholder {
@@ -98,13 +105,17 @@ input[type="text"] {
     width: 150px;
     height: 50px;
     border-radius: 5px;
-    background-color: #f4f6f8;
-    color: var(--app-purple);
+    background-color: #f5c133;
+    color: #fff;
     font-size: 20px;
     font-weight: 600;
-    box-shadow: 0px 5px 10px rgb(0 0 0 / 0.4);
-    visibility: hidden;
-    opacity: 0;
+    box-shadow: 0px 5px 10px rgb(0 0 0 / 0.3);
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+#restart:hover {
+    background-color: var(--app-yellow-hover);
 }
 
 #restart.is-visible {
@@ -116,7 +127,7 @@ input[type="text"] {
     width: 150px;
     height: 46px;
     text-align: center;
-    background-color: #9a009a;
+    background-color: var(--app-yellow);
     border: none;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
@@ -130,5 +141,5 @@ input[type="text"] {
 }
 
 .guess:hover {
-    background-color: #8b038b;
+    background-color: var(--app-yellow-hover);
 }
