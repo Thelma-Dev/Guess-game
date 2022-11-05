@@ -66,7 +66,7 @@ input[type="text"] {
     font-size: 17px;
     font-weight: 400;
     color: #670067;
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 600;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
@@ -76,7 +76,9 @@ input[type="text"]:focus {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-
+::placeholder {
+    font-size: 25px;
+}
 
 /* Styling Output */
 .output {

@@ -84,7 +84,7 @@ onEvent('click', btn, function() {
         } else {
             output.innerText =`Woohoo! You guessed right`;
             guesses.classList = 'is-visible';
-            guesses.innerText = `Trials: ${count}`;
+            guesses.innerText = `You had ${count} guesses`;
             restartBtn.classList = 'is-visible';
             number.value = '';
             count = 0;
