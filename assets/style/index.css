@@ -2,7 +2,6 @@
  
 :root {
     --app-purple:#670067;
-    --app-blue:#3c57ff;
     --app-yellow: #f5c133;
     --app-yellow-hover: #f7bc1c;
 }
@@ -25,13 +24,20 @@ main {
     padding: 100px 0px 30px;
 }
 
-h2, p {
+h1, p {
     color: #ffff;
 }
 
+h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
 h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
+    color: #f2f4f6;
     visibility: hidden;
     opacity: 0;
 }
@@ -46,9 +52,10 @@ p {
     transition: all 0.25s ease-in-out;
 }
 
+
 /* Styling input */
 input[type="text"] {
-    margin-top: 30px;
+    margin-top: 40px;
     width: 200px;
     height: 150px;
     padding: 0 15px;
@@ -96,7 +103,8 @@ input[type="text"]:focus {
     cursor: default;
 }
 
-/* Styling Button */
+
+/* Styling Buttons */
 #restart {
     position: fixed;
     Top: 40px;
@@ -105,13 +113,14 @@ input[type="text"]:focus {
     width: 150px;
     height: 50px;
     border-radius: 5px;
-    background-color: #f5c133;
+    background-color: var(--app-yellow);
     color: #fff;
     font-size: 20px;
     font-weight: 600;
     box-shadow: 0px 5px 10px rgb(0 0 0 / 0.3);
-    /* visibility: hidden;
-    opacity: 0; */
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
 }
 
 #restart:hover {

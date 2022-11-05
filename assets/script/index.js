@@ -25,14 +25,8 @@ const guesses = select('h2')
 
 // Start game
 function readWindow() {
-    // guesses.classList = 'is-visible';
-    // guesses.innerText = 'I am a number less than 50, what am i?';
     number.value = '';
 } 
-
-window.addEventListener('load', () => {
-    readWindow();
-});
 
 
 onEvent('focus', inputField, function(event) {;
@@ -90,7 +84,7 @@ onEvent('click', btn, function() {
         } else {
             output.innerText =`Woohoo! You guessed right`;
             guesses.classList = 'is-visible';
-            guesses.innerText = `Guesses: ${count}`;
+            guesses.innerText = `Trials: ${count}`;
             restartBtn.classList = 'is-visible';
             number.value = '';
             count = 0;
