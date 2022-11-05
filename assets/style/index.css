@@ -55,10 +55,10 @@ p {
 
 /* Styling input */
 input[type="text"] {
-    margin-top: 40px;
+    margin-top: 30px;
     width: 200px;
     height: 150px;
-    padding: 0 15px;
+    padding: 0 10px;
     border: none;
     background-color: rgb(250, 248, 248);
     border-radius: 5px;
@@ -76,10 +76,6 @@ input[type="text"]:focus {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-::placeholder {
-    font-size: 18px;
-    font-weight: 400;
-}
 
 
 /* Styling Output */
