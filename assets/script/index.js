@@ -69,7 +69,7 @@ function validate() {
     let valid = true;
 
     
-    if (num.length === 0 && !isValid(Number(num))) {
+    if (num.length === 0 || !isValid(Number(num))) {
         output.innerText = 'Enter a valid number';
         valid = false;
     } else if (num < answer) {
