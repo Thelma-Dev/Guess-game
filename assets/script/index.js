@@ -29,11 +29,6 @@ function readWindow() {
 } 
 
 // Add event listener
-onEvent('focus', inputField, function(event) {;
-    guesses.classList = 'h2';
-});
-
-
 onEvent('click', restartBtn, function() {
     window.location.reload()
     readWindow();
@@ -49,7 +44,7 @@ onEvent('keypress', inputField, function(event) {;
 
 
 // Generating random number
-const randomNumber = Math.floor(Math.random() * 50);
+const randomNumber = Math.floor(Math.random() * 50) + 1;
 console.log(randomNumber);
 
 
@@ -79,18 +74,19 @@ function validate() {
         output.innerText = 'Oops! Try a smaller number';
     } else if (num == answer) {
         output.innerText ='Woohoo! You guessed right';
-        guesses.classList = 'is-visible';
         guesses.innerText = `You had ${count} guesses`;
         restartBtn.classList = 'is-visible';
         number.value = '';
         count = 0;
+
     }
     count++;
 }
 
 
-// Adding an event listener
+// Adding an event listener to the guess button
 onEvent('click', btn, function() {
+    guesses.innerText = `Guesses: ${count}`;
     validate();
 });
 
